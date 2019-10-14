@@ -10,6 +10,8 @@
 		7C09E36F2355096B00B33ADE /* Incrementor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C09E3652355096B00B33ADE /* Incrementor.framework */; };
 		7C09E3742355096B00B33ADE /* IncrementorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C09E3732355096B00B33ADE /* IncrementorTests.swift */; };
 		7C09E3762355096B00B33ADE /* Incrementor.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C09E3682355096B00B33ADE /* Incrementor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C09E3802355097C00B33ADE /* Incrementable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C09E37F2355097C00B33ADE /* Incrementable.swift */; };
+		7C09E38223550AAA00B33ADE /* Incrementor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C09E38123550AAA00B33ADE /* Incrementor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		7C09E36E2355096B00B33ADE /* IncrementorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IncrementorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C09E3732355096B00B33ADE /* IncrementorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncrementorTests.swift; sourceTree = "<group>"; };
 		7C09E3752355096B00B33ADE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C09E37F2355097C00B33ADE /* Incrementable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Incrementable.swift; sourceTree = "<group>"; };
+		7C09E38123550AAA00B33ADE /* Incrementor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Incrementor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				7C09E3682355096B00B33ADE /* Incrementor.h */,
+				7C09E37F2355097C00B33ADE /* Incrementable.swift */,
+				7C09E38123550AAA00B33ADE /* Incrementor.swift */,
 				7C09E3692355096B00B33ADE /* Info.plist */,
 			);
 			path = Incrementor;
@@ -148,6 +154,7 @@
 				TargetAttributes = {
 					7C09E3642355096B00B33ADE = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 					7C09E36D2355096B00B33ADE = {
 						CreatedOnToolsVersion = 11.0;
@@ -195,6 +202,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C09E38223550AAA00B33ADE /* Incrementor.swift in Sources */,
+				7C09E3802355097C00B33ADE /* Incrementable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +349,7 @@
 		7C09E37A2355096B00B33ADE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9JKXG5353D;
@@ -348,6 +358,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Incrementor/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,6 +367,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = AI.Incrementor;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +376,7 @@
 		7C09E37B2355096B00B33ADE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9JKXG5353D;
@@ -372,6 +385,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Incrementor/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -388,6 +402,7 @@
 		7C09E37D2355096B00B33ADE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9JKXG5353D;
 				INFOPLIST_FILE = IncrementorTests/Info.plist;
@@ -406,6 +421,7 @@
 		7C09E37E2355096B00B33ADE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9JKXG5353D;
 				INFOPLIST_FILE = IncrementorTests/Info.plist;
